@@ -16,6 +16,9 @@ aws s3api put-bucket-versioning --bucket rahamssshaik09.k8s.local --region us-ea
 export KOPS_STATE_STORE=s3://rahamssshaik09.k8s.local
 kops create cluster --name rahams.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.micro
 kops update cluster --name rahams.k8s.local --yes --admin
+### Here, executing script we need execute again commands
+   # cat file name.yml --> export KOPS_STATE_STORE=s3://rahamssshaik09.k8s.local
+   # kops validate cluster --wait 10
 
 # List cluster : kops get cluster
 # Edit the Cluster name : kops edit rahams.k8s.local 
