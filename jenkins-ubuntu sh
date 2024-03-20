@@ -1,6 +1,6 @@
 #STEP-1: INSTALLING GIT JAVA-1.8.0 MAVEN
 sudo apt-get update -y && sudo apt upgrade -y
-apt install git openjdk-8-jdk maven -y
+apt install wget awscli curl nano git openjdk-8-jre maven -y
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > Ubuntu)
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
@@ -10,7 +10,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
     /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 #STEP-3: DOWNLOAD JAVA11 AND JENKINS
-sudo apt install openjdk-11-jdk -y
+sudo apt install openjdk-11-jre -y
 apt install jenkins -y
 update-alternatives --config java
 
