@@ -12,7 +12,9 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 #STEP-3: DOWNLOAD JAVA11 AND JENKINS
 sudo apt install openjdk-11-jdk -y
 apt install jenkins -y
+update-alternatives --config java
 
 #STEP-4: RESTARTING JENKINS
 service jenkins start
+chkconfig jenkins on
 service jenkins status
